@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vacation Map</title>
+  <script src="http://maps.google.com/maps/api/js?sensor=false" 
+          type="text/javascript"></script>
+
+  </script>
+  <style>
+  body {
+  background-color: #C0C0C0;
+}
+h1,h2{
+  color: black;
+}
+.header{
+  text-align: right;
+}
+.rule{
+  width: 100%;
+  background-color: #999;
+  height: 10px;
+}
+
+.grid{
+  margin: 0 auto;
+  width: 980px;
+}
+.row{
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
+  display: flex; flex-wrap: wrap;
+}
+.col-1 {
+  width: 8.33%;
+}
+.col-2 {
+  width:16.66%;
+}
+.col-3 {
+  width:25%;
+}
+.col-4 {
+  width:33.33%; 
+
+}
+.col-5 {
+  width:41.66%;
+}
+.col-6 {
+  width:50%;
+}
+.col-7 {
+  width:58.33%;
+}
+.col-8 {
+  width:66.66%;
+}
+.col-9 {
+  width:75%;
+}
+.col-10 {
+  width:83.33%;
+}
+.col-11 {
+  width:91.66%;
+}
+.col-12 {
+  width:100%;
+}
+
+hr {
+  width: 100%;
+  height: 5px;
+  line-height: 5px;
+  background-color: #206BA4;
+}
+
+.image-thumb{
+  width: 100%;
+  max-width: 200px;
+  display: flex;
+  margin-left:auto;
+  margin-right:auto;
+  -webkit-box-shadow: 5px 15px 10px 5px #1C1C1C;
+  box-shadow: 5px 15px 10px 5px #1C1C1C;  
+}
+
+.infoHeader {
+  text-align: center;
+}
+
+.mainHead {
+  text-align: center;
+  color: black;
+}
+
+#map {
+  border: 3px solid #E7E4D3;
+  display: block;
+  height:100%;
+  margin-left:auto;
+  margin-right: auto;
+  -webkit-box-shadow: 10px 5px 10px 5px #1C1C1C;
+  box-shadow: 10px 5px 10px 5px #1C1C1C;
+}
+
+.mapDiv {
+  height: 1000px;
+  width: 100%;
+}
+
+#places {
+  border:3px solid black;
+  float: right;
+  height: 400px;
+  width: 600px;
+}
+
+
+
+  </style>
+</head>
+<body>
+  <div class="grid">
+    <div class="row">
+    <div class="col-12">
+      <header><h1 class="mainHead">Vacation Map</h1></header>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="mapDiv">
+        <div id="map"></div>
+        
+      </div>
+      
+      <script type="text/javascript">
+          var locations = [
+            ['MLM Family Medicine', 33.306927,-111.998462,'MLM Family Medicine is located in Phoenix, Ahwatukee, North of Chandler Blvd on S. Mountain Pkwy between the Walgreens and Physical Therapy. MLM Family Medicine specializes in Family Medicine, ranging in scope from wellness exams, annual / sports physicals, vaccinations, minor surgery, injury & allergy testing. Referrals to specialists when needed, and Lana Khatib PA-C, has a special interest and is certified in Medical aesthetics and cosmetology.'],
+          ];
+         var map = new google.maps.Map(document.getElementById('map'), {
+           zoom: 12,
+           center: new google.maps.LatLng(33.306927,-111.998462),
+           mapTypeId: google.maps.MapTypeId.HYBRID
+          });
+         var infowindow = new google.maps.InfoWindow();
+          
+          var marker, i;
+          for (i = 0; i < locations.length; i++) {  
+           marker = new google.maps.Marker({
+              icon: 'images/pin2.png',
+              position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+             map: map
+           });
+           google.maps.event.addListener(marker, 'click', (function(marker, i) {
+             return function() {
+               infowindow.setContent('<div><h2 class="infoHeader">' + locations[i][0]+ '</h2></div>' +'<div>'+locations [i][3]+'</div><br>');
+               infowindow.open(map, marker);
+              }
+            })(marker, i));
+         }
+  </script>
+    </div>
+  </div> 
+</div>
+  
+</body>
+</html>
