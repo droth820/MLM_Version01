@@ -57,7 +57,11 @@
 
 		.mapDiv {
 		  height: 450px;
-		  width: 100%;
+		  width: 75%;
+		}
+		.infoHeader {
+			color:black;
+			text-align: center;
 		}
 
 		#places {
@@ -112,9 +116,9 @@
 			<Nav>
 				<div class="col-md-8">
               		<ul id="menu">
-                		<li><a href="#" class="nav-btn">Home</a></li> 
-		                <li><a href="#" class="nav-btn">About</a></li>
-		                 <li><a href="#" class="nav-btn">Insurance</a></li>
+                		<li><a href="index.html" class="nav-btn">Home</a></li> 
+		                <li><a href="about.html" class="nav-btn">About</a></li>
+		                 <li><a href="insurance.html" class="nav-btn">Insurance</a></li>
 		                <li><a href="contact.html" class="nav-btn">Contact</a></li>
 		            </ul>
             	</div>
@@ -135,6 +139,20 @@
 <div class="row">
 	<div class="col-md-6">
 	 <center><h1 class="title-text">Contact us</h1></center>
+	 <article class="contact">
+
+			<form action="process.php" method="POST">
+		        <p>Name *</p>
+		        <input type="text" name="name">
+		        <p>Email *</p>
+		        <input type="text" name="email">
+		        <p>Message *</p>
+		        <textarea name="message" rows="20" cols="45"></textarea>
+		        <br/>
+		        <input type="submit" value="Send" class="buton">
+		        <input type="reset" value="Clear">
+		      </form>
+	    </article>
 	</div>
 	<div class="col-md-6">
 	 <center><h1 class="title-text">MLM Family Medicine</h1></center>
@@ -146,10 +164,15 @@
 	 		<li>Address: 15410 S. Mountain Pkwy #105, Phoenix, AZ 85044</li>
 	 	</ul>
 
+	 	<div class="mapDiv">
+        <div id="map"></div>
+        
+      </div>
+
 	
 	</div>
 </div>
-<div class="row">
+<!--<div class="row">
 	<div class="col-md-6" role="contact">
  		<article class="contact">
 
@@ -165,13 +188,13 @@
 		        <input type="reset" value="Clear">
 		      </form>
 	    </article>
-	</div>
+	</div> -->
 	<!--Map-->
-	<div class="col-md-6">
+	<!--<div class="col-md-6">
 		<div class="mapDiv">
         <div id="map"></div>
         
-      </div>
+      </div>-->
       
       <script type="text/javascript">
           var locations = [
@@ -193,7 +216,7 @@
            });
            google.maps.event.addListener(marker, 'click', (function(marker, i) {
              return function() {
-               infowindow.setContent('<div><h2 class="infoHeader">' + locations[i][0]+ '</h2></div>' +'<div>'+locations [i][3]+'</div><br>');
+               infowindow.setContent('<div><h2 class="infoHeader">' + locations[i][0]+'<div><img src="images/ahwatukee.png"alt="Ahwatukee"></div>' + '</h2></div>' +'<div>'+locations [i][3]+'</div><br>');
                infowindow.open(map, marker);
               }
             })(marker, i));
@@ -210,7 +233,7 @@
 
 
 <!-- Footer -->
-
+<br>
 <footer class="row">
   <div class="col-md-12">
     <hr />
@@ -220,10 +243,10 @@
       </div>
       <div class="col-md-6">
         <ul id="fMenu">
-          <li><a href="#" class="button">HOME</a></li>
-          <li><a href="#" class="button">ABOUT</a></li>
-          <li><a href="#" class="button">INSURANCE</a></li>
-          <li><a href="#" class="button">CONTACT</a></li>
+          <li><a href="index.html" class="button">HOME</a></li>
+          <li><a href="about.html" class="button">ABOUT</a></li>
+          <li><a href="insurance.html" class="button">INSURANCE</a></li>
+          <li><a href="contact.html" class="button">CONTACT</a></li>
         </ul>
       </div>
     </div>
