@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>About Us</title>
+		<title>New Patient Forms</title>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-compatible" content="IE=edge">
 		<meta name= "viewport"  content="width=device-width, initial-scale=1">
@@ -59,6 +59,10 @@
 		  height: 450px;
 		  width: 75%;
 		}
+		.infoHeader {
+			color:black;
+			text-align: center;
+		}
 
 		#places {
 		  border:3px solid black;
@@ -74,6 +78,15 @@
 		.title-text {
 			font-size: 1.5em;
 			color: black;
+		}
+		.medium-font {
+		  font-size: 28px;
+		  color: #696969;
+		  font-family: 'Open Sans',sans-serif;
+		  text-align: center;
+		  font-weight: 500;
+		  padding-bottom: 25px;
+
 		}
 		.nav-btn {
 			display: inline-block;
@@ -100,18 +113,16 @@
 			color: #074e84;
 			text-decoration: none;
 		}
-		.clear {
-      		clear: both;
-	      	display: block;
-	     	 overflow: hidden;
-	      	visibility: hidden;
-	      	width: 0;
-	      	height: 0;
-	    }
-
-    .label {
-      text-align: left;
-    }
+		.form {
+			color: #074e84;
+			font-size: 1em;
+			font-family: 'Open Sans',sans-serif;
+			text-decoration: underline;
+		}
+		.instruction {
+			margin-left: 25px;
+			max-width: 100%;
+		}
 </style>
 	</head>
 	<body>
@@ -134,81 +145,32 @@
 			
 		</div>
     <hr>
-	</div>
+		<div class="row">
+			<div class="col-md-12">
+				<center><h1 class="title-text">New Patient Forms</h1></center>
+				<hr/>
+			</div>
+
+		</div></div>
 
 <!-- End Nav --> 
-<!-- Why MLM -->
+<!--New Patient Forms-->
 <div class="row">
-	<div class="col-md-12">
-		<h1 class="title-text">About Us</h1>
+</div>
+<div class="clearfix visible-md"></div><br>
+<div class="row">
+	<div class="col-md-6"><section class="instruction">Welcome to MLM Family Medicine. To help your first visit run as smoothly as possible, please download and complete the New Patient Packet, located to the right, and bring it with you to your appointment. If you have any questions please call us at 480.588.7564. Thank you!</section></div>
+	
+	<!--Forms-->
+	<div class="col-md-6">
+		<section>
+			<ul>
+				<li><a class="form" href="PatientDocs/mlm_registration.pdf" target="_blank">New Patient Packet</a>
+			</ul>
+		</section>
 	</div>
 </div>
-<div class="row">
-	<div class="col-md-12">
-	<hr/>
-	</div>
-</div>
-
-<div class="row">
-	<div class="col-md-6 col-md-offset-3">
-		<center><p>Does the idea of a medical appointment bring up memories of long waits, followed by a whirlwind visit? Not at MLM Family Medicine. At MLM Family Medicine, our primary concern is you, the patient. We take pride in providing personal and friendly health services in a caring environment. We are dedicated to fully educating you about your health needs and we strive to be your primary care provider of choice. From your first visit, you will notice the difference. As a smaller primary care medical practice, we are able to spend more time focusing on the needs of our patients, ensuring you receive the best primary care.</p></center>
-	</div>
-</div>
-<!--Clickable images-->
-<div class="row">
-	<div class="col-md-4 col-md-offset-2">
-          <img class="img-responsive service-image" src="images/ahwatukee.png" alt="Adult Medicine" data-toggle="modal" data-target="#service1">
-         <h3 class="text-muted label">MLM Family Medicine</h3>
-        </div>
-
-        <div class="col-md-4 col-md-offset-2">
-          <img class="img-responsive service-image" src="images/LanaKhatib.png" alt="Pediatric Medicine" data-toggle="modal" data-target="#service2"><h3 class="text-muted label">Lana Khatib PA-C</h3>
-        </div>
-</div>
-<!--End of clickable images-->
-<!--Modal 01-->
-<div class="modal fade" id="service1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <center><h4 class="modal-title" id="myModalLabel1">About MLM Family Medicine</h4></center>
-            </div>
-            <div class="modal-body"><center><img class="img-responsive" src="images/ahwatukee.png" alt="Click for information on Adult Medicine"></center>
-              <span>
-                Located in Phoenix, Ahwatukee, we specialize in Family Medicine, ranging in scope from wellness exams, annual / sports physicals, vaccinations, minor surgery, injury & allergy testing.<br><br>
-                 Referrals to specialists when needed, and Lana Khatib PA-C, has a special interest and is certified in Medical aesthetics and cosmetology.
-              </span>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-<!--End Modal 01-->
-<!Modal 02 -->
-<div class="modal fade" id="service2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <center><h4 class="modal-title" id="myModalLabel1">Lana Khatib PA-C</h4></center>
-            </div>
-            <div class="modal-body"><center><img class="img-responsive" src="images/LanaKhatib.png" alt="Click for information on Adult Medicine"></center>
-              <span  >
-                  Lana is a graduate of A.T. Still University. Her clinical experience is in family medicine, pediatrics, and urgent care. Lana comes from a public health background and was involved in national and local healthcare research and community projects before joining the field as a clinician. She also enjoys teaching and continues to precept students from local medical programs. Lana treasures spending time with family and friends and likes to travel whenever time allows.
-              </span>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-<!End Modal 02 -->
-
-
-
-
+<!--End of new patient forms container-->
 <!-- Footer -->
 <br>
 <footer class="row">
